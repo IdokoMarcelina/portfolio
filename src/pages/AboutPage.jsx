@@ -1,6 +1,6 @@
 import React from 'react'
 import About from '../components/About'
-import ImageCard from '../components/imageCard'
+import ImageCard from '../components/ImageCard'
 import Capabilities from '../components/Capabilities'
 import Experience from '../components/Experience'
 import styled from 'styled-components'
