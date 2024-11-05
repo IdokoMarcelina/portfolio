@@ -29,7 +29,7 @@ function About() {
            Miro, Confluence. Eager to contribute strong technical
             skills and a passion for software development to a dynamic
              development team </p>
-      <a href="">More About Me On LinkedIn <GoArrowUpRight /></a>
+      <a href="https://www.linkedin.com/in/marcelinaidoko">More About Me On LinkedIn <GoArrowUpRight /></a>
     </Right>     
     </Container>
     </Wrapper>

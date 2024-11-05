@@ -17,7 +17,7 @@ function Footer() {
 
               <h2>LET'S CONNECT</h2>
               <p>Say hello at idokomarcelinauregu@gmail.com</p>
-              <p>For more info, here's my <a href="">resume</a></p>
+              <p>For more info, here's my <a href="https://drive.google.com/file/d/1LbndPYmhciAqt6qbo72XLL6mTtq2bDSE/view?usp=drivesdk">resume</a></p>
 
               <Icons>
 
