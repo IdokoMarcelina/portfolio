@@ -46,6 +46,10 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+
+  @media(max-width: 800px){
+    margin-top: 2px;
+  }
 `
 
 const Container = styled.div`

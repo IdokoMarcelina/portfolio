@@ -45,7 +45,9 @@ const Wrapper = styled.div`
   padding: 0 10px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 100px;
+
+
+ 
 `
 
 const Container = styled.div`
@@ -59,6 +61,7 @@ const Container = styled.div`
   align-items: center;
   justify-content: center;
 
+
   p{
     width: 100%;
   }
@@ -68,6 +71,10 @@ const Left = styled.div`
     width: 30%;
 h1{
   margin-top: 100px;
+
+  @media(max-width:800px){
+    margin-top: 0;
+  }
 
 }
 
@@ -102,13 +109,18 @@ grid-template-columns: repeat(4,1fr);
 align-items: center;
 gap: 2rem;
 
+@media(max-width: 800px){
+grid-template-columns: repeat(2,1fr);
+
+}
+
     button{
         width: 120px;
         height: 35px;
         background-color: #222222;
         border: 1px solid #222222;
         border-radius: 10px;
-        color: white;
+        color: #D3E978;
         
     }
 `

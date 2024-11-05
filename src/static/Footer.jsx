@@ -3,6 +3,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { FaGithub } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
+import {Link} from 'react-router-dom'
 
 function Footer() {
   return (
@@ -19,10 +20,23 @@ function Footer() {
               <p>For more info, here's my <a href="">resume</a></p>
 
               <Icons>
-              <FaLinkedinIn />
-              <CiTwitter />
-              <FaGithub />
+
+              <a href='https://www.linkedin.com/in/marcelinaidoko'>
+                <FaLinkedinIn />
+              </a>
+
+              <a href='https://mobile.x.com/Marcelinaidoko'>
+                <CiTwitter />
+              </a>
+
+              <a href='https://github.com/IdokoMarcelina'>
+               <FaGithub />
+              </a>
+              <a href='https://www.instagram.com/the_lady_mimi?igsh=MW5ucWo0bGJjbGpwag=='>
               <FaInstagramSquare />
+              </a>
+
+              
 
               </Icons>
               <span>&copy; Marcelina idoko</span>
@@ -30,19 +44,19 @@ function Footer() {
 
           <Right>
 
-            <form action="">
+            <form action="https://formspree.io/f/mkgnjaww" method="POST">
               <label htmlFor="name">Name</label> <br />
-              <input type="text" /> <br />
+              <input type="text" name="text" /> <br />
 
               <label htmlFor="email">Email</label> <br />
-              <input type="email" /> <br />
+              <input type="email" name="email" /> <br />
 
               <label htmlFor="subject">Subject</label> <br />
-              <input type="text" /> <br />
+              <input type="text"  name="subject"/> <br />
               <label  htmlFor="subject">Message</label> <br />
-              <input className="message"   type="text" /> <br />
+              <input className="message" name="message"  type="text" /> <br />
 
-              <button>Submit</button>
+              <button type="submit">Submit</button>
             </form>
 
           </Right>
@@ -89,6 +103,10 @@ a{
 span{
   font-size: 10px;
   color: gray;
+
+  @media(max-width: 800px){
+    display: none;
+  }
 }
   
 
@@ -97,9 +115,10 @@ const Right = styled.div`
   
   input{
     background-color: #222222;
+    color: white;
     border: 1px solid #222222;
     height: 30px;
-    width: 400px;
+    width: 300px;
     margin-bottom: 5px;
     border-radius: 7px;
   }
@@ -116,7 +135,7 @@ const Right = styled.div`
     background-color: #D3E978;
     border: 1px solid #D3E978;
     border-radius: 20px;
-    width: 100px;
+    width: 300px;
     height: 30px;
     margin-top: 20px;
   }
@@ -129,5 +148,11 @@ gap: 2rem;
 color: #D3E978;
 font-size: 20px;
 margin-bottom: 110px;
+
+
+@media(max-width: 800px){
+  margin-bottom: 50px;
+
+  }
 
 `

@@ -25,7 +25,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 img{
-    width: 400px;
+    width: 300px;
 }
 
 @media(max-width: 800px){

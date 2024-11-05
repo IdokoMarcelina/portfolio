@@ -34,8 +34,8 @@ const Projects = () => {
                 date1="2024"
                 role="role"
                 date2="Front-end Developer"
-                liveDemo={<span>LIVE DEMO <MdArrowOutward /></span>} 
-                github={<span>SEE ON GITHUB <FaGithub /></span>} 
+                liveDemo={<a href='https://flag-tan.vercel.app/'>LIVE DEMO <MdArrowOutward /></a>} 
+                github={<a href='https://github.com/IdokoMarcelina/flag.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
                 />
                 <Cards 
@@ -50,8 +50,8 @@ const Projects = () => {
                 date1="2024"
                 role="role"
                 date2="Front-end Developer"
-                liveDemo={<span>LIVE DEMO <MdArrowOutward /></span>} 
-                github={<span>SEE ON GITHUB <FaGithub /></span>} 
+                liveDemo={<a href='https://to-do-list-app-eta-ruby.vercel.app/'>LIVE DEMO <MdArrowOutward /></a>} 
+                github={<a href='https://github.com/IdokoMarcelina/To-do-list-app.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
                 />
                 <Cards 
@@ -68,8 +68,8 @@ const Projects = () => {
                 date1="2024"
                 role="role"
                 date2="Front-end Developer"
-                liveDemo={<span>LIVE DEMO <MdArrowOutward /></span>} 
-                github={<span>SEE ON GITHUB <FaGithub /></span>} 
+                liveDemo={<a hre='https://form-validation-zeta-six.vercel.app/'>LIVE DEMO <MdArrowOutward /></a>} 
+                github={<a href='https://github.com/IdokoMarcelina/form-validation.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
                 />
                 <Cards 
@@ -83,8 +83,8 @@ const Projects = () => {
                 date1="2024"
                 role="role"
                 date2="Front-end Developer"
-                liveDemo={<span>LIVE DEMO <MdArrowOutward /></span>} 
-                github={<span>SEE ON GITHUB <FaGithub /></span>} 
+                liveDemo={<a href='https://kuda-clone-jade.vercel.app/'>LIVE DEMO <MdArrowOutward /></a>} 
+                github={<a href='https://github.com/IdokoMarcelina/kuda-clone.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
                 />
                 <Cards 
@@ -99,8 +99,8 @@ const Projects = () => {
                 date1="2024"
                 role="role"
                 date2="Front-end Developer"
-                liveDemo={<span>LIVE DEMO <MdArrowOutward /></span>} 
-                github={<span>SEE ON GITHUB <FaGithub /></span>} 
+                liveDemo={<a href='https://productpage-rho.vercel.app/'>LIVE DEMO <MdArrowOutward /></a>} 
+                github={<a href='https://github.com/IdokoMarcelina/productpage.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
                 />
             </Pcontainer>
@@ -152,7 +152,9 @@ const Pcontainer = styled.div`
     @media(max-width:800px){
         padding-left: 50px;
         padding-right: auto;
-        width: 90%;
+        width: 80%;
+        padding-bottom: 0px;
+
 
         img{
             width: 90%;
@@ -213,10 +215,10 @@ const Pcontainer = styled.div`
         
 
         a{
-            border-bottom: 1px solid #D3E978;
             background-color: transparent;
             color: #D3E978;
             font-size: 10px;
+            text-decoration: none;
         }
     }
 

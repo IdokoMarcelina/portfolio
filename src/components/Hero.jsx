@@ -2,6 +2,7 @@ import styled from "styled-components"
 import Frame3 from '../assets/icons/Frame3.png'
 import Frame4 from '../assets/icons/Frame4.png'
 import Marcelina from '../assets/images/marcelina.png'
+import {Link} from 'react-router-dom';
 
 
 const Hero = () => {
@@ -20,11 +21,19 @@ const Hero = () => {
 
 
             <Buttons>
-                <button className="contact">CONTACT ME
-                    <div className="circle"></div> 
-                </button>
-                <button className="in"><img src={Frame4} alt="" /></button>
-                <button className="in"><img src={Frame3} alt="" /></button>
+                <Link to='/contact'>
+                    <button className="contact" >CONTACT ME
+                        <div className="circle"></div> 
+                    </button>
+                </Link>
+                
+                <Link to='https://www.linkedin.com/in/marcelinaidoko'>
+                    <button className="in"><img src={Frame4} alt="" /></button>
+                </Link>
+
+                <Link to='https://github.com/IdokoMarcelina'>
+                    <button className="in"><img src={Frame3} alt="" /></button>
+                </Link>
             </Buttons>
         </HeroText>
 

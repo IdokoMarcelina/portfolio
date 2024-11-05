@@ -57,6 +57,10 @@ const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
+
+  @media(max-width:800px){
+    margin-top: 20px;
+  }
 `
 
 const Container = styled.div`
@@ -80,6 +84,10 @@ const Left = styled.div`
     width: 30%;
 h1{
   margin-top: 200px;
+
+  @media(max-width:800px){
+    margin-top: 0;
+  }
 
 }
 
