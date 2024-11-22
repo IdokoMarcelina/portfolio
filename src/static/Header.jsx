@@ -36,7 +36,7 @@ function Header() {
 
 export default Header
 
-const Nav = styled.div`
+const Nav = styled.div`   
     display: flex;
     justify-content: space-between;
     align-items: center;

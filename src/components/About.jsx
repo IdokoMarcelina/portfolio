@@ -25,7 +25,7 @@ function About() {
          with Flutter and Dart programming language to build
           interactive Mobile User interface.  Experienced with 
           using Cisco packet tracer for simulations and managing
-           product using product management tools such as Jira, 
+           product using product management tools such as Jira,trello, 
            Miro, Confluence. Eager to contribute strong technical
             skills and a passion for software development to a dynamic
              development team </p>
