@@ -34,8 +34,8 @@ function Cards(props) {
             <hr />
 
            <div className="cardbutton">
-           <a>{props.liveDemo}</a>
-           <a>{props.github}</a>
+           <a href={props.liveDemo} target="_blank" rel="noopener noreferrer">liveDemo</a>
+           <a href={props.github} target="_blank" rel="noopener noreferrer">Github</a>
            </div>
 
            <hr />

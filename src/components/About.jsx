@@ -15,7 +15,7 @@ function About() {
     </Left> 
 
     <Right>
-      <h4>I am a Front-end developer based in Lagos .
+      <h4>I am a Full-stack developer(MERN) based in Lagos .
           HND in COMPUTER SCIENCE
       </h4>
       <p> Passionate and inquisitive software developer 

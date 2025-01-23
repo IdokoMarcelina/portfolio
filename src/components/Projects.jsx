@@ -7,6 +7,7 @@ import Form from '../assets/images/form.png'
 import Todo from '../assets/images/todo.png'
 import Kuda from '../assets/images/kuda.png'
 import Product from '../assets/images/product.png'
+import bcolar from '../assets/images/bcolar.png'
 
 const Projects = () => {
   return (
@@ -23,6 +24,21 @@ const Projects = () => {
         </Head>
 
             <Pcontainer>
+                <Cards 
+                image={bcolar} 
+                title="Bcolar App"
+                text="Blue-Collar is an App that helps to connect artisans to people in need of ther services
+                        using location.it is a Dynamic Platform for Artisans to Showcase their Skills 
+                        and Connect with Clients.  "
+                info="PROJECT INFO"
+                year="Year"
+                date1="2025"
+                role="role"
+                date2="Front-end and backend"
+                liveDemo= 'https://frontendbcolar-pyxh.vercel.app/'
+                github='https://github.com/IdokoMarcelina/frontendbcolar.git'
+                
+                />
                 <Cards 
                 image={Flag} 
                 title="REST Countries API"
@@ -72,7 +88,7 @@ const Projects = () => {
                 github={<a href='https://github.com/IdokoMarcelina/form-validation.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
                 />
-                <Cards 
+                {/* <Cards 
                 image={Kuda} 
                 title="Kuda-App Clone"
                 text="A Clone of Kuda-App showing ability to Route from
@@ -86,7 +102,7 @@ const Projects = () => {
                 liveDemo={<a href='https://kuda-clone-jade.vercel.app/'>LIVE DEMO <MdArrowOutward /></a>} 
                 github={<a href='https://github.com/IdokoMarcelina/kuda-clone.git'>SEE ON GITHUB <FaGithub /></a>} 
                 
-                />
+                /> */}
                 <Cards 
                 image={Product} 
                 title="E-commerce Product Page"

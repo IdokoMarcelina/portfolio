@@ -14,7 +14,7 @@ const Hero = () => {
     <Container>
         <HeroText>
             <h1>HI, I AM <br /> MARCELINA IDOKO.</h1>
-            <p>A Lagos based front-end developer 
+            <p>A Lagos based Full-stack developer (MERN)
                 passionate about building accessible 
                 and user friendly websites.
             </p>
@@ -27,13 +27,13 @@ const Hero = () => {
                     </button>
                 </Link>
                 
-                <Link to='https://www.linkedin.com/in/marcelinaidoko'>
+                <a  target="_blank" rel="noopener noreferrer" href='https://www.linkedin.com/in/marcelinaidoko'>
                     <button className="in"><img src={Frame4} alt="" /></button>
-                </Link>
+                </a>
 
-                <Link to='https://github.com/IdokoMarcelina'>
+                <a  target="_blank" rel="noopener noreferrer" href='https://github.com/IdokoMarcelina'>
                     <button className="in"><img src={Frame3} alt="" /></button>
-                </Link>
+                </a>
             </Buttons>
         </HeroText>
 
