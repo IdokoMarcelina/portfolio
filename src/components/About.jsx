@@ -30,6 +30,7 @@ function About() {
             skills and a passion for software development to a dynamic
              development team </p>
       <a href="https://www.linkedin.com/in/marcelinaidoko">More About Me On LinkedIn <GoArrowUpRight /></a>
+      <a href="https://drive.google.com/file/d/1eohm14TnvHWJoCI1d3wZfsmlwt_GhZxq/view?usp=sharing">CV<GoArrowUpRight /></a>
     </Right>     
     </Container>
     </Wrapper>
