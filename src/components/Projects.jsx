@@ -10,6 +10,7 @@ import Product from '../assets/images/product.png'
 import bcolar from '../assets/images/bcolar.png'
 import homeview from '../assets/images/homeview.png'
 import escort from '../assets/images/escort.png'
+import monpa from '../assets/images/monpa.png'
 
 const Projects = () => {
   return (
@@ -57,7 +58,7 @@ const Projects = () => {
                 />
 
                 <Cards
-                image={bcolar} 
+                image={monpa} 
                 title="Monpa App"
                 text="it is an in progress escrow system that holds funds until an agreemnet is reached between the buyer and seller
                         , integrated paystack for funding wallet and withdrawal.  "
