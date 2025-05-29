@@ -29,8 +29,8 @@ function About() {
            Wireframes with Miro, Confluence. Eager to contribute strong technical
             skills and a passion for software development to a dynamic
              development team </p>
-      <a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/marcelinaidoko">More About Me On LinkedIn <GoArrowUpRight /></a>
-      <a target="_blank" rel="noopener noreferrer" href="https://drive.google.com/file/d/1eohm14TnvHWJoCI1d3wZfsmlwt_GhZxq/view?usp=sharing">CV<GoArrowUpRight /></a>
+      <a href="https://www.linkedin.com/in/marcelinaidoko" target="_blank" rel="noopener noreferrer" >More About Me On LinkedIn <GoArrowUpRight /></a>
+      <a href="https://drive.google.com/file/d/1eohm14TnvHWJoCI1d3wZfsmlwt_GhZxq/view?usp=sharing"  target="_blank" rel="noopener noreferrer" >CV<GoArrowUpRight /></a>
     </Right>     
     </Container>
     </Wrapper>

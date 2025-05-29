@@ -8,6 +8,8 @@ import Todo from '../assets/images/todo.png'
 import Kuda from '../assets/images/kuda.png'
 import Product from '../assets/images/product.png'
 import bcolar from '../assets/images/bcolar.png'
+import homeview from '../assets/images/homeview.png'
+import escort from '../assets/images/escort.png'
 
 const Projects = () => {
   return (
@@ -24,6 +26,51 @@ const Projects = () => {
         </Head>
 
             <Pcontainer>
+                <Cards 
+                image={homeview} 
+                title="Pinvent App"
+                text="It is an inventory management app, that allows small business owners regiister, login to mange day to day inventory
+                 add, remove, update , monitor and view inventory.  "
+                info="PROJECT INFO"
+                year="Year"
+                date1="2025"
+                role="role"
+                date2="backend and Frontend"
+                liveDemo= 'https://documenter.getpostman.com/view/38379745/2sB2qfAzYX'
+                github='https://github.com/IdokoMarcelina/pinvent-backend.git'
+                
+                />
+
+                <Cards 
+                image={escort} 
+                title="Escort App"
+                text="it is an App that allows users to find and request for an escort, it allows user to chat with
+                a live bot with automated responses and transfered to a live agent if bot is unable to answer the question.  "
+                info="PROJECT INFO"
+                year="Year"
+                date1="2025"
+                role="role"
+                date2="Backend"
+                liveDemo= 'https://documenter.getpostman.com/view/38379745/2sAYkGJe6c'
+                github='https://github.com/IdokoMarcelina/escort.git'
+                
+                />
+
+                <Cards
+                image={bcolar} 
+                title="Monpa App"
+                text="it is an in progress escrow system that holds funds until an agreemnet is reached between the buyer and seller
+                        , integrated paystack for funding wallet and withdrawal.  "
+                info="PROJECT INFO"
+                year="Year"
+                date1="2025"
+                role="role"
+                date2="Backend"
+                liveDemo= 'https://documenter.getpostman.com/view/38379745/2sB2izDtHU'
+                github='https://github.com/IdokoMarcelina/monpa.git'
+                
+                />
+
                 <Cards 
                 image={bcolar} 
                 title="Bcolar App"
