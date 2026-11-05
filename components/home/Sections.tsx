@@ -1,5 +1,4 @@
 import {
-  education,
   pad,
   profile,
   skills,
@@ -55,61 +54,6 @@ export function Skills() {
   );
 }
 
-function Timeline({
-  rows,
-}: {
-  rows: { role: string; org: string; period: string; note: string }[];
-}) {
-  return (
-    <ol>
-      {rows.map((r) => (
-        <li
-          key={r.role + r.period}
-          className="group relative grid gap-2 py-6 md:grid-cols-12 md:gap-6 md:py-8"
-        >
-          <span
-            data-reveal="line"
-            aria-hidden
-            className="absolute inset-x-0 top-0 h-px bg-border"
-          />
-          <span
-            data-reveal="up"
-            className="font-mono text-xs text-muted md:col-span-3 md:pt-2"
-          >
-            {r.period}
-          </span>
-          <div data-reveal="up" className="md:col-span-5">
-            <h3 className="font-display text-2xl font-medium tracking-[-0.02em] md:text-3xl">
-              {r.role}
-            </h3>
-            <p className="mt-1 text-muted">{r.org}</p>
-          </div>
-          {r.note && (
-            <p
-              data-reveal="up"
-              className="text-sm text-muted md:col-span-4 md:pt-2"
-            >
-              {r.note}
-            </p>
-          )}
-        </li>
-      ))}
-    </ol>
-  );
-}
-
-export function Experience() {
-  return (
-    <section id="experience" className="px-gutter py-28 md:py-44">
-      <SectionTitle eyebrow="003 / experience" title="Experience" />
-      <Timeline rows={experience} />
-      <div data-reveal="up" className="mt-24 mb-8">
-        <Eyebrow>Education</Eyebrow>
-      </div>
-      <Timeline rows={education} />
-    </section>
-  );
-}
 
 export function Contact() {
   return (
