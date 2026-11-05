@@ -1,6 +1,5 @@
 import {
   education,
-  experience,
   pad,
   profile,
   skills,

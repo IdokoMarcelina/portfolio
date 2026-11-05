@@ -91,7 +91,7 @@ export function Projects() {
         <SectionTitle
           eyebrow="002 / work"
           title="Projects"
-          aside="Three apps, start to store. Each one has a full case study."
+          aside="Four projects, web to mobile. Each one has a full case study."
         />
       </div>
 

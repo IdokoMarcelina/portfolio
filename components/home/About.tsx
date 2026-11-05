@@ -22,7 +22,16 @@ export function About() {
         <div className="space-y-6 text-[17px] leading-relaxed text-pretty text-fg/75 md:text-lg">
           {profile.bio.map((p) => (
             <p key={p} data-reveal="up">
-              {p}
+              {p}{" "}
+              <a
+                href={profile.youtube}
+                target="_blank"
+                rel="noreferrer"
+                className="text-fg underline underline-offset-4 decoration-fg/30 hover:decoration-fg transition-colors"
+              >
+                teach ↗
+              </a>
+              .
             </p>
           ))}
           <p data-reveal="up">
@@ -48,7 +57,7 @@ export function About() {
 
         <ul
           data-reveal="stagger"
-          className="-mx-gutter flex snap-x snap-mandatory gap-3 overflow-x-auto px-gutter pb-2 scrollbar-none md:mx-0 md:grid md:grid-cols-3 md:overflow-visible md:px-0"
+          className="-mx-gutter flex snap-x snap-mandatory gap-3 overflow-x-auto px-gutter pb-2 scrollbar-none md:mx-0 md:grid md:grid-cols-4 md:overflow-visible md:px-0"
         >
           {projects.map((p, i) => (
             <li

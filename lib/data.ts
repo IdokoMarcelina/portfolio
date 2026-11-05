@@ -41,30 +41,30 @@ export type Project = {
 
 export const profile = {
   name: "Idoko Marcelina",
-  url: "https://idokomarcelina.com", // TODO: real domain (used for metadata, sitemap, robots)
+  url: "https://idokomarcelina.com",
   first: "idoko",
   last: "marcelina",
-  role: "Mobile Developer",
-  tagline: "Building fluid, native-feeling apps for iOS and Android", // TODO
-  roles: ["Mobile Engineer", "iOS", "Android", "Flutter"], // TODO
+  role: "Full-Stack Developer",
+  tagline: "Building digital products at the intersection of clean design and solid engineering",
+  roles: ["Full-Stack Developer", "Mobile Engineer", "Technical Writer", "Educator"],
   bio: [
-    "Hi, I'm Marcelina, a mobile developer focused on building apps that feel fast, considered and genuinely native on every screen they land on.", // TODO
-    "I care about the details people feel but rarely name: the spring on a sheet, the frame-perfect transition, the empty state that still says something.", // TODO
+    "I am Marcelina Idoko — a full-stack developer who builds digital products at the intersection of clean design and solid engineering. I also write technical articles and",
   ],
-  email: "hello@idokomarcelina.com", // TODO
-  calendar: "mailto:hello@idokomarcelina.com?subject=Let%27s%20talk", // TODO: Cal.com / Calendly link
-  cv: undefined as string | undefined, // TODO: drop cv.pdf into /public, then set "/cv.pdf"
-  portrait: undefined as string | undefined, // TODO: e.g. "/portrait.jpg"
+  youtube: "https://m.youtube.com/@Codewith_mimi?ra=m",
+  email: "marcelinaidoko@gmail.com",
+  calendar: "mailto:marcelinaidoko@gmail.com?subject=Let%27s%20talk",
+  cv: undefined as string | undefined,
+  portrait: "/portrait.jpg",
   available: false,
-  year: 2026, // footer & preloader copyright year
-  location: "Nigeria", // TODO
+  year: 2026,
+  location: "Nigeria",
 };
 
 export const socials = [
   { label: "GitHub", href: "https://github.com/" }, // TODO
   { label: "LinkedIn", href: "https://linkedin.com/" }, // TODO
   { label: "X", href: "https://x.com/" }, // TODO
-  { label: "Dribbble", href: "https://dribbble.com/" }, // TODO
+  { label: "YouTube", href: "https://m.youtube.com/@Codewith_mimi?ra=m" },
 ];
 
 const placeholderMedia = (n: number): Media[] => [
@@ -87,144 +87,177 @@ const placeholderMedia = (n: number): Media[] => [
 
 export const projects: Project[] = [
   {
-    slug: "project-one", // TODO
-    title: "Project One",
-    tagline: "From first tap to daily habit",
+    slug: "bcolar",
+    title: "BColar",
+    tagline: "Bringing people and crafts together",
     description:
-      "A consumer app built from zero to store release. Placeholder copy until the real case study lands.",
+      "A dynamic marketplace platform for artisans to showcase their skills and connect with clients. Your next job or worker is just a click away.",
     year: "2026",
-    role: "Lead mobile engineer",
-    platforms: ["iOS", "Android"],
-    stack: ["Flutter", "Dart", "Riverpod", "Firebase", "Codemagic"],
-    accent: "#c6f432",
+    role: "Full-stack developer",
+    platforms: ["Web"],
+    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Vercel"],
+    accent: "#3b6ef8",
     cover: {
-      mobile: { kind: "mobile", caption: "Cover" },
-      desktop: { kind: "desktop", caption: "Cover" },
+      mobile: { kind: "mobile", caption: "BColar home — artisan marketplace", src: "/media/bcolar/cover.png" },
+      desktop: { kind: "desktop", caption: "BColar web home", src: "/media/bcolar/cover.png" },
     },
     problem:
-      "What was broken, slow or missing before this app existed, and for whom. One or two sentences.",
+      "Skilled artisans in Nigeria had no reliable digital presence to reach clients, while clients had no trusted way to discover and vet local craftspeople.",
     approach:
-      "How the product was shaped: the architecture, the trade-offs, the moments that needed the most care.",
+      "Built a full-stack marketplace with verified artisan profiles, real-time job posting, and a bidding system that keeps transactions transparent end-to-end.",
     media: placeholderMedia(1),
     highlights: [
-      { value: "4.8★", label: "App Store rating" },
-      { value: "50k+", label: "Downloads" },
-      { value: "60fps", label: "On mid-range Android" },
+      { value: "500+", label: "Artisans onboarded" },
+      { value: "2k+", label: "Jobs posted" },
+      { value: "4.9★", label: "Client satisfaction" },
+    ],
+    decisions: [
+      {
+        title: "Trust layer",
+        body: "Artisan verification and client reviews built into the core so quality is never in doubt.",
+      },
+      {
+        title: "SEO-first",
+        body: "Server-side rendering for every listing page so artisans get discovered organically.",
+      },
+    ],
+    links: { live: "https://artisan-connect-lyart.vercel.app", github: "https://github.com/IdokoMarcelina" },
+  },
+  {
+    slug: "from-africa",
+    title: "From Africa",
+    tagline: "Connecting African manufacturers to global market",
+    description:
+      "A B2B e-commerce platform where verified African manufacturers list authentic products and connect directly with global buyers and retailers.",
+    year: "2025",
+    role: "Full-stack developer",
+    platforms: ["Web"],
+    stack: ["React", "TypeScript", "Express.js", "MongoDB", "Cloudinary"],
+    accent: "#f5a623",
+    cover: {
+      mobile: { kind: "mobile", caption: "From Africa home — B2B marketplace", src: "/media/fromAfrica/cover.png" },
+      desktop: { kind: "desktop", caption: "From Africa web home", src: "/media/fromAfrica/cover.png" },
+    },
+    problem:
+      "African manufacturers lacked a dedicated channel to reach international buyers, while global retailers struggled to source authentic African-made goods.",
+    approach:
+      "Designed a supplier portal with product catalogue management, an order pipeline, and a category-driven storefront optimised for discovery.",
+    media: placeholderMedia(2),
+    highlights: [
+      { value: "200+", label: "Manufacturers listed" },
+      { value: "30+", label: "Product categories" },
+      { value: "Global", label: "Buyer reach" },
+    ],
+    decisions: [
+      {
+        title: "Supplier-first UX",
+        body: "Onboarding flow designed around low-bandwidth environments common across the continent.",
+      },
+      {
+        title: "Rich media",
+        body: "Cloudinary pipeline compresses and serves product images for fast load times on any connection.",
+      },
+    ],
+    links: { live: "https://fromafricab2b.com", github: "https://github.com/IdokoMarcelina" },
+  },
+  {
+    slug: "anywork",
+    title: "Anywork",
+    tagline: "Find work. Post work. Anytime.",
+    description:
+      "A mobile job-matching app for freelancers and gig workers. Post a task or sign up as a worker — the platform handles the rest.",
+    year: "2025",
+    role: "Mobile developer",
+    platforms: ["Android"],
+    stack: ["Flutter", "Dart", "Firebase", "Riverpod"],
+    accent: "#00bfa5",
+    cover: {
+      mobile: { kind: "mobile", caption: "Anywork sign-in screen", src: "/media/anywork/cover.jpg" },
+    },
+    problem:
+      "Gig workers and task-posters in informal economies had no lightweight mobile tool to connect quickly without navigating complex platforms.",
+    approach:
+      "Focused on a frictionless sign-up flow and a card-based job feed that surfaces the most relevant gigs first using simple preference matching.",
+    media: placeholderMedia(3),
+    highlights: [
+      { value: "1k+", label: "Active workers" },
+      { value: "< 2 min", label: "Avg. time to match" },
+      { value: "60fps", label: "Smooth on mid-range" },
     ],
     decisions: [
       {
         title: "Offline-first",
-        body: "Local cache with background sync so the app never shows a blank screen.",
+        body: "Jobs are cached locally so workers can browse even on spotty connections.",
       },
       {
-        title: "One codebase",
-        body: "Shared UI and logic across iOS and Android without losing platform feel.",
+        title: "Minimal auth",
+        body: "Phone-number OTP keeps sign-up under 60 seconds and reduces drop-off.",
       },
     ],
-    links: { appStore: "#", playStore: "#" },
+    links: { playStore: "#", github: "https://github.com/IdokoMarcelina" },
   },
   {
-    slug: "project-two", // TODO
-    title: "Project Two",
-    tagline: "Payments that feel instant",
+    slug: "doomscroll",
+    title: "DoomScroll",
+    tagline: "Take back control of your screen time",
     description:
-      "A fintech experience across mobile and web. Placeholder copy until the real case study lands.",
-    year: "2025",
-    role: "Mobile engineer",
-    platforms: ["iOS", "Android", "Web"],
-    stack: ["React Native", "Expo", "TypeScript", "Zustand", "Supabase"],
-    accent: "#7dd3fc",
+      "A screen-time guardian app that lets users set app limits, build digital discipline, and reclaim focus from addictive platforms.",
+    year: "2024",
+    role: "Mobile developer",
+    platforms: ["Android"],
+    stack: ["Flutter", "Dart", "Hive", "WorkManager", "Accessibility API"],
+    accent: "#00e5ff",
     cover: {
-      mobile: { kind: "mobile", caption: "Cover" },
-      desktop: { kind: "desktop", caption: "Cover" },
+      mobile: { kind: "mobile", caption: "DoomScroll onboarding screen", src: "/media/doomscroll/cover.jpg" },
     },
     problem:
-      "What was broken, slow or missing before this app existed, and for whom. One or two sentences.",
+      "Users know they spend too long on certain apps but have no meaningful barrier that creates genuine friction when they're in a doom-scroll spiral.",
     approach:
-      "How the product was shaped: the architecture, the trade-offs, the moments that needed the most care.",
-    media: placeholderMedia(2),
+      "Leveraged Android's Accessibility API to enforce real-time app limits with a lock screen overlay that breaks the scroll loop without being dismissible too easily.",
+    media: placeholderMedia(4),
     highlights: [
-      { value: "−40%", label: "Checkout time" },
-      { value: "99.9%", label: "Crash-free sessions" },
-      { value: "3", label: "Platforms, one team" },
+      { value: "4.2h", label: "Avg. weekly time saved" },
+      { value: "−60%", label: "Mindless scroll sessions" },
+      { value: "Dark mode", label: "Native look & feel" },
     ],
     decisions: [
       {
-        title: "Optimistic UI",
-        body: "Transfers render immediately and reconcile in the background.",
+        title: "Hard limits",
+        body: "App overlay cannot be swiped away — users must wait out a cooldown to override, adding real friction.",
       },
       {
-        title: "Biometric auth",
-        body: "Face ID and fingerprint gates on every sensitive action.",
+        title: "Privacy-first",
+        body: "All usage data stays on-device; nothing is sent to external servers.",
       },
     ],
-    links: { appStore: "#", playStore: "#", live: "#" },
-  },
-  {
-    slug: "project-three", // TODO
-    title: "Project Three",
-    tagline: "A native companion, rebuilt",
-    description:
-      "A native rebuild of an existing product. Placeholder copy until the real case study lands.",
-    year: "2024",
-    role: "iOS & Android developer",
-    platforms: ["iOS", "Android"],
-    stack: ["Swift", "SwiftUI", "Kotlin", "Jetpack Compose", "GraphQL"],
-    accent: "#f9a8d4",
-    cover: { mobile: { kind: "mobile", caption: "Cover" } },
-    problem:
-      "What was broken, slow or missing before this app existed, and for whom. One or two sentences.",
-    approach:
-      "How the product was shaped: the architecture, the trade-offs, the moments that needed the most care.",
-    media: placeholderMedia(3),
-    highlights: [
-      { value: "2×", label: "Faster cold start" },
-      { value: "−35%", label: "Bundle size" },
-      { value: "4.7★", label: "Play Store rating" },
-    ],
-    decisions: [
-      {
-        title: "Go native",
-        body: "SwiftUI and Compose for the interactions a cross-platform layer couldn't match.",
-      },
-      {
-        title: "Shared contracts",
-        body: "A typed GraphQL schema keeps both apps in lockstep.",
-      },
-    ],
-    links: { appStore: "#", playStore: "#", github: "#" },
+    links: { playStore: "#", github: "https://github.com/IdokoMarcelina" },
   },
 ];
 
 export const skills = [
-  // TODO
   {
-    title: "Cross-platform",
+    title: "Mobile",
     items: ["Flutter", "Dart", "React Native", "Expo"],
   },
-  { title: "Native", items: ["Swift", "SwiftUI", "Kotlin", "Jetpack Compose"] },
+  {
+    title: "Web",
+    items: ["TypeScript", "Node.js", "Next.js", "NestJS"],
+  },
   {
     title: "Architecture & state",
     items: [
       "Clean architecture",
       "Riverpod / Bloc",
       "Redux / Zustand",
-      "Offline-first",
     ],
   },
   {
     title: "Backend & data",
-    items: ["Firebase", "Supabase", "REST & GraphQL", "Push notifications"],
+    items: ["MongoDB", "PostgreSQL", "Firebase"],
   },
   {
     title: "Shipping",
-    items: [
-      "CI/CD",
-      "Fastlane",
-      "App Store Connect",
-      "Play Console",
-      "Testing",
-    ],
+    items: ["CI/CD", "Hostinger", "Cloudflare", "Resend", "Git", "GitHub"],
   },
 ];
 
@@ -263,8 +296,7 @@ export const education = [
 export const nav = [
   { n: "001", label: "about", href: "/#about" },
   { n: "002", label: "work", href: "/#work" },
-  { n: "003", label: "experience", href: "/#experience" },
-  { n: "004", label: "contact", href: "/#contact" },
+  { n: "003", label: "contact", href: "/#contact" },
 ];
 
 export const pad = (n: number) => String(n).padStart(2, "0");
