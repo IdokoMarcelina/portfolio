@@ -35,6 +35,18 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <noscript>
           <style>{`[data-preloader]{display:none}`}</style>
         </noscript>
+        {/* Inter — hero body text */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
+        {/* basis33 — pixel font for hero */}
+        <link
+          href="https://db.onlinewebfonts.com/c/d08bafd725a4cfc309efb5a88e0b63a5?family=basis33"
+          rel="stylesheet"
+        />
       </head>
       {/* suppressHydrationWarning: browser extensions inject attributes on <body> */}
       <body suppressHydrationWarning>

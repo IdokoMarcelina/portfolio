@@ -6,7 +6,6 @@ import { gsap, useGSAP, EASE } from "@/lib/gsap";
 import { getLenis } from "@/lib/scroll";
 import { nav, profile, socials } from "@/lib/data";
 import { TransitionLink } from "@/components/ui/TransitionLink";
-import { Magnetic } from "@/components/ui/MagneticButton";
 import { CopyEmail } from "@/components/ui/CopyEmail";
 import { Arrow } from "@/components/ui/primitives";
 
@@ -22,17 +21,13 @@ export function Nav() {
         .set(overlay.current, { visibility: "visible" })
         .fromTo(
           overlay.current,
-          { clipPath: "circle(0% at calc(100% - 44px) 44px)" },
-          {
-            clipPath: "circle(150% at calc(100% - 44px) 44px)",
-            duration: 0.9,
-            ease: "expo.inOut",
-          },
+          { clipPath: "inset(0% 0% 100% 0%)" },
+          { clipPath: "inset(0% 0% 0% 0%)", duration: 0.7, ease: "expo.inOut" },
         )
         .from(
           "[data-menu-link]",
-          { yPercent: 110, stagger: 0.06, duration: 0.9, ease: EASE },
-          "-=0.45",
+          { yPercent: 110, stagger: 0.07, duration: 0.9, ease: EASE },
+          "-=0.4",
         )
         .from(
           "[data-menu-meta]",
@@ -60,97 +55,82 @@ export function Nav() {
 
   return (
     <>
-      <header className="pointer-events-none fixed inset-x-0 top-0 z-50 flex items-start justify-between p-gutter pt-5">
+      {/* Flat black navbar */}
+      <header className="fixed inset-x-0 top-0 z-50 flex items-center justify-between bg-bg px-gutter h-16 border-b border-border">
+        {/* Logo: orange square + name */}
         <TransitionLink
           href="/"
           onBeforeNavigate={close}
           aria-label={`${profile.name}, home`}
-          className="pointer-events-auto flex flex-row gap-2 font-display text-[15px] font-semibold leading-[1.05] mix-blend-difference"
+          className="flex items-center gap-2.5"
         >
-          <span>I</span>
-          <span>/</span>
-          <span>M</span>
+          <span
+            className="flex h-7 w-7 items-center justify-center rounded-sm text-[10px] font-bold text-white"
+            style={{ backgroundColor: "#EE5021" }}
+            aria-hidden
+          >
+            M
+          </span>
+          <span className="font-display text-[15px] font-semibold tracking-tight text-fg">
+            Marcelina
+          </span>
         </TransitionLink>
 
-        <div className="pointer-events-auto flex items-center gap-8">
-          <nav
-            aria-label="Primary"
-            className="hidden items-center gap-6 mix-blend-difference md:flex"
-          >
-            {nav.map((item) => (
-              <TransitionLink
-                key={item.n}
-                href={item.href}
-                className="group flex items-baseline gap-1.5 text-[13px] text-fg/80 transition-colors hover:text-fg"
-              >
-                <span className="font-mono text-[10px] text-muted transition-colors group-hover:text-accent">
-                  {item.n}
-                </span>
-                {item.label}
-              </TransitionLink>
-            ))}
-          </nav>
-          <Magnetic>
-            <button
-              type="button"
-              onClick={() => setOpen((o) => !o)}
-              aria-expanded={open}
-              aria-controls="site-menu"
-              aria-label={open ? "Close menu" : "Open menu"}
-              className="relative grid size-12 place-items-center cursor-pointer rounded-full bg-fg text-bg transition-transform active:scale-95"
-            >
-              <span
-                className={clsx(
-                  "absolute h-px w-5 bg-current transition-transform duration-500",
-                  open ? "rotate-45" : "-translate-y-0.75",
-                )}
-              />
-              <span
-                className={clsx(
-                  "absolute h-px w-5 bg-current transition-transform duration-500",
-                  open ? "-rotate-45" : "translate-y-0.75",
-                )}
-              />
-            </button>
-          </Magnetic>
-        </div>
+        {/* Hamburger — plain two-line, no circle */}
+        <button
+          type="button"
+          onClick={() => setOpen((o) => !o)}
+          aria-expanded={open}
+          aria-controls="site-menu"
+          aria-label={open ? "Close menu" : "Open menu"}
+          className="relative flex h-10 w-10 cursor-pointer flex-col items-end justify-center gap-[6px]"
+        >
+          <span
+            className={clsx(
+              "block h-px bg-fg transition-all duration-500 origin-center",
+              open ? "w-6 rotate-45 translate-y-[7px]" : "w-6",
+            )}
+          />
+          <span
+            className={clsx(
+              "block h-px bg-fg transition-all duration-500 origin-center",
+              open ? "w-6 -rotate-45 -translate-y-[7px]" : "w-4",
+            )}
+          />
+        </button>
       </header>
 
+      {/* Full-screen overlay menu */}
       <div
         ref={overlay}
         id="site-menu"
         aria-hidden={!open}
         inert={!open}
-        className="invisible fixed inset-0 z-40 flex flex-col justify-between bg-surface p-gutter pt-28"
+        className="invisible fixed inset-0 z-40 flex flex-col justify-between bg-surface px-gutter pt-24 pb-10"
+        style={{ clipPath: "inset(0% 0% 100% 0%)" }}
       >
         <nav aria-label="Menu">
-          <ul className="flex flex-col gap-1">
+          <ul className="flex flex-col">
             {nav.map((item) => (
-              <li key={item.n} className="overflow-hidden">
+              <li key={item.n} className="overflow-hidden border-b border-border py-2">
                 <TransitionLink
                   data-menu-link
                   href={item.href}
                   onBeforeNavigate={close}
-                  className="group flex items-start gap-4 font-display text-[clamp(3rem,11vw,9rem)] font-medium leading-[0.95] tracking-[-0.045em]"
+                  className="group flex items-center justify-between font-display text-[clamp(2.5rem,9vw,7rem)] font-semibold leading-[1] tracking-[-0.04em] text-fg transition-colors hover:text-accent"
                 >
-                  <span className="mt-[0.5em] font-mono text-xs tracking-normal text-muted transition-colors group-hover:text-accent">
-                    {item.n}
-                  </span>
-                  <span className="transition-transform duration-500 group-hover:translate-x-3 group-hover:underline">
-                    {item.label}
-                  </span>
+                  <span>{item.label}</span>
+                  <span className="font-mono text-sm text-muted group-hover:text-accent">{item.n}</span>
                 </TransitionLink>
               </li>
             ))}
           </ul>
         </nav>
-        <div className="flex flex-wrap items-end justify-between gap-6 border-t border-border pt-6 text-sm">
-          <div data-menu-meta>
-            <CopyEmail email={profile.email} />
-          </div>
+        <div data-menu-meta className="flex flex-wrap items-end justify-between gap-6 border-t border-border pt-6 text-sm">
+          <CopyEmail email={profile.email} />
           <ul className="flex flex-wrap gap-5">
             {socials.map((s) => (
-              <li key={s.label} data-menu-meta>
+              <li key={s.label}>
                 <a
                   href={s.href}
                   target="_blank"

@@ -1,29 +1,40 @@
 @import "tailwindcss";
 @import "lenis/dist/lenis.css";
 
+/* ── External pixel font ─────────────────────────────────────── */
+@font-face {
+  font-family: 'basis33';
+  src: url('https://db.onlinewebfonts.com/c/d08bafd725a4cfc309efb5a88e0b63a5?family=basis33') format('woff2');
+  font-display: swap;
+}
+
+.font-pixel {
+  font-family: 'basis33', monospace;
+}
+
 :root {
-  --bg: #050505;
-  --surface: #0e0e0e;
-  --surface-2: #161616;
-  --border: #1f1f1f;
-  --border-strong: #2c2c2c;
-  --fg: #fafafa;
-  --muted: #8a8a8a;
-  --faint: #5a5a5a;
-  --accent: #c6f432;
-  --gutter: 16px;
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #1a1a1a;
+  --border: #222222;
+  --border-strong: #333333;
+  --fg: #f5f5f5;
+  --muted: #888888;
+  --faint: #444444;
+  --accent: #EE5021;
+  --gutter: 20px;
   color-scheme: dark;
 }
 
 @media (min-width: 640px) {
   :root {
-    --gutter: 32px;
+    --gutter: 36px;
   }
 }
 
 @media (min-width: 1024px) {
   :root {
-    --gutter: 48px;
+    --gutter: 56px;
   }
 }
 
@@ -58,22 +69,21 @@ body {
 
 ::selection {
   background: var(--accent);
-  color: #050505;
+  color: #0a0a0a;
 }
 
-/* Thin accent scrollbar, like the oyewale inspo */
 html {
   scrollbar-width: thin;
   scrollbar-color: var(--accent) transparent;
 }
 
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
-  border-radius: 6px;
+  border-radius: 4px;
 }
 
 :focus-visible {
@@ -81,13 +91,27 @@ html {
   outline-offset: 3px;
 }
 
-/* Preloader is skipped on repeat visits in the same session (set by an inline head script) */
 .intro-seen [data-preloader] {
   display: none;
 }
 
+/* Ticker / marquee */
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+.ticker-track {
+  display: flex;
+  width: max-content;
+  animation: ticker 22s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+  html { scroll-behavior: auto; }
+  .ticker-track { animation: none; }
 }

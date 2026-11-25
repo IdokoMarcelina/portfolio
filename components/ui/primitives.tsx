@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 export function Eyebrow({ children, className, dot }: { children: ReactNode; className?: string; dot?: boolean }) {
   return (
@@ -15,13 +15,14 @@ export function Eyebrow({ children, className, dot }: { children: ReactNode; cla
   );
 }
 
-export function Pill({ children, className }: { children: ReactNode; className?: string }) {
+export function Pill({ children, className, style }: { children: ReactNode; className?: string; style?: CSSProperties }) {
   return (
     <span
       className={clsx(
         "inline-flex items-center rounded-full border border-fg/40 px-3 py-1 text-[12px] leading-none text-fg/90",
         className,
       )}
+      style={style}
     >
       {children}
     </span>

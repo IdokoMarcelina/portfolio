@@ -46,7 +46,12 @@ export const profile = {
   last: "marcelina",
   role: "Full-Stack Developer",
   tagline: "Building digital products at the intersection of clean design and solid engineering",
-  roles: ["Full-Stack Developer", "Mobile Engineer", "Technical Writer", "Educator"],
+  roles: [
+    { label: "Full-Stack Developer" },
+    { label: "Mobile Engineer" },
+    { label: "Technical Writer", href: "https://medium.com/@mirabeluregu" },
+    { label: "Educator" },
+  ],
   bio: [
     "I am Marcelina Idoko — a full-stack developer who builds digital products at the intersection of clean design and solid engineering. I also write technical articles and",
   ],
@@ -259,6 +264,15 @@ export const skills = [
     title: "Shipping",
     items: ["CI/CD", "Hostinger", "Cloudflare", "Resend", "Git", "GitHub"],
   },
+];
+
+/** Flat list of technologies shown in the grid on the homepage. */
+export const techStack = [
+  "Next.js", "React", "TypeScript", "Node.js",
+  "Flutter", "Dart", "NestJS", "Express.js",
+  "PostgreSQL", "MongoDB", "Firebase", "Supabase",
+  "Riverpod", "Redux", "REST APIs", "WebSockets",
+  "Git", "Vercel", "Cloudinary", "Stripe",
 ];
 
 export const experience = [

@@ -12,9 +12,9 @@ export function Preloader() {
   useGSAP(
     () => {
       const el = root.current!;
-      let seen = false;
+      let seen = true;
       try {
-        seen = !!sessionStorage.getItem(INTRO_KEY);
+        seen = true;
         sessionStorage.setItem(INTRO_KEY, "1");
       } catch {}
 
